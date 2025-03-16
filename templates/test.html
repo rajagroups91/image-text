@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processed Text - Raja Groups</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #0072ff, #ff6600);
+            color: white;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .container {
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            width: 50%;
+            margin: auto;
+        }
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Processed Text</h1>
+
+    <div class="container">
+        <h4>Extracted Text:</h4>
+        <label for="extracted-text" class="form-label"><b>Result:</b></label>
+        <p id="extracted-text">{{ text }}</p>
+        <a href="/" class="btn btn-primary">Upload Another Image</a>
+    </div>
+
+</body>
+</html>

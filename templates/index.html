@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raja Groups - Upload Image</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #007bff, #ff7b00);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 30px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .header h2 {
+            font-size: 20px;
+            background: white;
+            color: #ff7b00;
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        /* Upload Form */
+        .upload-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 90%;
+            max-width: 500px;
+        }
+        h3 {
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 22px;
+        }
+
+        /* File Input */
+        input[type="file"] {
+            border: 2px solid #007bff;
+            padding: 8px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        /* Button Styling */
+        .button-container {
+            margin-top: 20px;
+        }
+        button {
+            background-color: #ff7b00;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #e66a00;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .upload-container {
+                padding: 15px;
+            }
+            h3 {
+                font-size: 18px;
+            }
+            input[type="file"] {
+                padding: 6px;
+            }
+            button {
+                font-size: 14px;
+                padding: 10px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Raja Groups</h1>
+        <h2>Image to Text Generator</h2>
+    </div>
+
+    <div class="upload-container">
+        <h3>Upload an Image</h3>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="image" class="form-label"><b>Choose an image:</b></label>
+            <input type="file" name="image" id="image" class="form-control mb-3" required>
+            <button type="submit" class="btn btn-warning">Process Image</button>
+        </form>
+    </div>
+
+</body>
+</html>
